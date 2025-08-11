@@ -2,10 +2,12 @@
 
 # Задание 1
 
-1. Спроектируйте to be архитектуру КиноБездны, разделив всю систему на отдельные домены и организовав интеграционное взаимодействие и единую точку вызова сервисов.
-Результат представьте в виде контейнерной диаграммы в нотации С4.
-Добавьте ссылку на файл в этот шаблон
-[ссылка на файл](ссылка)
+1. Спроектированная контейнерная To Be архитектура онлайн-кинотеатра в нотации C4 доступна для ознакомления по [ссылке](https://www.planttext.com?text=nLf9Rzj65BxhLqnpgOtQrg4zzLGlRReaXMkdxJ6WHCOXAee2ITarYW29LSSfRCH5UcZH9Ls0tYNPYcL5Llu2-O_wtfiXPqWEjNX1aSG9XxDyxtlhFEO3Fp2yeEdKIc_PzMgjQLhiOH0q_FVBPS_OMTgoWuVDIjEtlAfR3wnwi5HrdNAZPjHnpQ8Vc3MxKbvzRt4TXxwyUwVi67vWUJ1qVnLM67RTyfOQk7_fRHR-53sEMk4R-DMdV_N28OE7KVWwEWhFuEzks8xsOFWr_3bdy3WCUz4J76BH4pvr68wY7wAZw3bRSPjrq_1sI_4_vX3eRSzjDXROhV1FxRvzs0XEfpt3ONHuQvvzLs9itV9yjquR5AwDZXWyNi0cxV0yl5WC1s4V7aVq5kP4ZyFshQkjdYyz8g9UXc_WkHUUqifZJjG9Je4b_UXfr09oG11aAIrFQNCN5E3SJpXP1HKund9br_SHszzoSjYUZ8Y5l_B1i0E3Pm3e0c4IPum1qZzWSGVMF6O4kG-xZS9NC1TmeWgrsesEQNbY8VTJ6lp8g5hcSgD1UCVlly00qGW58hkwY0wZ_Q8pdoUmbPFdTgmA78KdlO1P7TqfFQxK_FW28usSqSyE4OVwGRPw20paPF9TT0WwGvk6OnR33hu0q6TWu8znUW5H32oMtft1ACuuZfv7Fy2x7eSAmgCcILjzlX0jRO2QfJtW9-1iqUGsJC0TQ0fV_Jq9HVRL5sCmmWyx1LlPutRx1gq4MKOkFZMsZSsgPpU21RPX6TK0x3RBg-DMx9ebgFsTxATFyWbsD3IpEQDkUgvjbctNBrj1TVxwYByWOmUkBeXUOIX35HSVUXd-lSJ8WnF2GKDxXKRr_sdXerepW53xJjq8x6rBemBVWT1-xokX0msD2LKj02_a_oTySRsiypKOUQC3XUJieJEIteqE-KlOGZ3PfLHnXF7m3KmRe3BIU3253E5Ss15swcDoGNOn-C5smuo-CDSKylo8ViP1y7VOP23C0DsvIq7si2Z8LOpgDrRTtBIyRRjgPSFSKBSPoi_n3K4woW9XNnlGZ8PzsmYi7MCNzbrks6oBFv5M_m8EdsHp2n8DciByGW5fWDc5LATcbbPYchquviQMpBSu9GCbbQ35yfn7pFOOQVMC_EqLfHXStKT8guPfxfO_S-jRYGNd3JdmBCEnwrk2CLZsjLNnNM0nI8dt8oA68_V9WHBJxCBHRTBtYAG-f-Exv09nMQ79rx0PPiIXDbXnsuXXxERTRwsImxssWY3_JT8uaKOkn4aQJO02hXArADcXUB4KRVGW9OyZhWtBj7t0b0MLJhHhhWEZivhX0YFNHtSxWCCn6o4ov5XrjrOnjSIUj5rLrHAMDE8lOOoPD9ZIzejednGAfegH1nmM00qmq7UvDQ9_Nn061TWudNDW9GqkenaybDQt34_Cvuy4vQKaX3i3aa46Sq8qjXZvpGdt9qhzJz63on38k13jmWe03xZjGdqjFIJnaInr4YAHDX4YUGfQO9mHggvdALP9fbL8bXQPwW2apPpHPyuOQ_d7qJwUikxwmPPdRNvnPpm7VhFYKs5YktN9nQOoodogZyTGCfK9o-WGrsUdTAl1mJOVnD_47xbDXoWMeGz2vf27lx7qQQIPCeGeO0eBOWo41Tm-6XCu6iQk0nV1cuyTL1HXNhg0jSHfGSn88P9XOvqFNtVaqC7IHOmTerQp0YLZqVCKKQC3Jw_v_hF51DLqKgTFDXfXpAUNDHYjCq8AgeBLA1oiYP4fMC2usS782TLUnZ84r54uYAlEyNZ74fK1UPDK5Pikt7WDqr9izW4DZA57r64YtfpnNegEB0Rr85P04EAZPoJIVggkcqXGx5sJYC4pHLC2ZzWJCx7o6c2o6nFAnuKRfraBR0VA6UE68qvrvhk1FXfb0Sk0T3TvS-tLpAp8TRRekDksvKjdlKlFbwWXg0J_7lL2Ts8gT2Wp5Q14I5cKFJR7ByNWMSFei2pKsiVO28_Ysdo0VP3vYIQSaanZo3cyUCFipuRt5Z5MttBrv9gU8zMl1CIDknCB4b9-Xz-r4exv9JTwkfGfraGyX7Law7GBxmkShsdzW7fbxQGNGmr4E43S9fGgPLA5efZwX_MgQrBhL35oYm-MJOl-dh5W9apIpWUYfEBLpGcDOS2bSKe4SMaDUGFRmx7TzMdY2Kr6QRLQRMVrsPviL8cWApMtahEfOe_iPI9dbs6lWAvqmt96whY_CcHqNJtbThRvxcBLTHf6O5Tg5lC3rpEsBBtTLSrwabnMrpuNYMLMLQZt_S4OpuXjK378BcK5cNv0Oi2HObS3smEJWQnZ6bZw9W9igAEN4oNN3vBGg9UEMPLtML26KzmbwokoVpugg2_o0dtHj9fMMgexxXP2_Wt1wPsuhUbcd6lyGicZycT9Sxwr3ObyfIc-0mn4KqOad6Uyh4r1IRv7l4WfKF_5uSDlWpbGBM-bo-ddgEz4ffmbQToEvgSh5X6OJYb8WoS3CENK5AzyF8K2IezZLRLyg-Gc5pEWgfP_oBdQ3YcCeemgGfS4wPEuES3P8j9au_TG0slgfVFyqnBCnG3_ZESId8Jol89YibLutqXkjBbE67zNsh1gukEP_A3o2oKfiHzMgDJHrNnUcLUMfxuRN6g7TDjxXYscO4SlFJ8ZIZd24LEGQiM2rhHTo0GJ1CgFxzrRVsSdRcqAgHH6hcT3bQ2hxpYHDS4CcK_g2modBYbj-MMQ4AgeDCtVQN1cXLQtr3KPfvLTirr1_-4AEnRV8MRObEiwnvwsAKtzOlR0zHo3T5gWL4LNOpvOed9Rl1HZzBqzNG0CCz_W5Rrh59Dkl6wihyPqgUFfrgUSb1fFcf7ywbbmdhw3ABVKlYzgrCcJjCkAOATaKvFsdrIuO1hgoEyk59LREC9h71eLDVqXLcYyNVIPyU0RGwgu4DGDdJU5HQKwQoF-hVoobgJtoMnFJbAkdv_lOCaLcRsodPp2YVdEdBIIt7cwxfISdZbJxTJ8IPdZRz2SSkXlyAoCwAcJhcN7NBtsbxoK2KDKArBgetq5DQZhiUNrJz9xnfkaaYr6wPdSGz_voJLthk8rXNadsnkIrbsufA3ZCSLAzSuwnVI2kw9ScCQURmPHsoPZobhmkIl_vhlfPPg6oCGrYhHZvwxOE5ihRC7zX_ytj1ProUBE75s9u_-oKj2fwuTdO-x5-QjFzbwCjvJO5sQ6Bwx5YXFBEmtOxG4tTNuDFQ2Rwe1o1KeZsohqTIthvHo2mhUuhVwCZ13y8r6axf641mLjeQne6YExXdYafUgA-vPA7y2EJQVs7m00).
+Если коротко, то имеется 3 основных домена:
+1. работа с пользовательской информацией
+2. работа с финансовой частью
+3. работа с мультимедией
+Все 3 домена объеденены сквозной шиной данных, через которую можно обмениваться изменениями домены.
 
 # Задание 2
 
@@ -32,7 +34,7 @@
       MONOLITH_URL: http://monolith:8080
       #монолит
       MOVIES_SERVICE_URL: http://movies-service:8081 #сервис movies
-      EVENTS_SERVICE_URL: http://events-service:8082 
+      EVENTS_SERVICE_URL: http://events-service:8082
       GRADUAL_MIGRATION: "true" # вкл/выкл простого фиче-флага
       MOVIES_MIGRATION_PERCENT: "50" # процент миграции
     networks:
@@ -56,12 +58,12 @@
     - Реализуйте простой API, при вызове которого будут создаваться события User/Payment/Movie и обрабатываться внутри сервиса с записью в лог
     - Добавьте в docker-compose новый сервис, kafka там уже есть
 
-Необходимые тесты для проверки этого API вызываются при запуске npm run test:local из папки tests/postman 
-Приложите скриншот тестов и скриншот состояния топиков Kafka из UI http://localhost:8090 
+Необходимые тесты для проверки этого API вызываются при запуске npm run test:local из папки tests/postman
+Приложите скриншот тестов и скриншот состояния топиков Kafka из UI http://localhost:8090
 
 # Задание 3
 
-Команда начала переезд в Kubernetes для лучшего масштабирования и повышения надежности. 
+Команда начала переезд в Kubernetes для лучшего масштабирования и повышения надежности.
 Вам, как архитектору осталось самое сложное:
  - реализовать CI/CD для сборки прокси сервиса
  - реализовать необходимые конфигурационные файлы для переключения трафика.
@@ -71,7 +73,7 @@
 
  В папке .github/worflows доработайте деплой новых сервисов proxy и events в docker-build-push.yml , чтобы api-tests при сборке отрабатывали корректно при отправке коммита в ваш репозиторий.
 
-Нужно доработать 
+Нужно доработать
 ```yaml
 on:
   push:
@@ -115,7 +117,7 @@ jobs:
 #### Шаг 1
 Для деплоя в kubernetes необходимо залогиниться в docker registry Github'а.
 1. Создайте Personal Access Token (PAT) https://github.com/settings/tokens . Создавайте class с правом read:packages
-2. В src/kubernetes/*.yaml (event-service, monolith, movies-service и proxy-service)  отредактируйте путь до ваших образов 
+2. В src/kubernetes/*.yaml (event-service, monolith, movies-service и proxy-service)  отредактируйте путь до ваших образов
 ```bash
  spec:
       containers:
@@ -137,11 +139,11 @@ jobs:
         }
 }
 ```
-то выполните 
+то выполните
 
 и добавьте
 
-```json 
+```json
  "auth": "имя пользователя:токен в base64"
 ```
 
@@ -166,7 +168,7 @@ cat .docker/config.json | base64
 
   Доработайте src/kubernetes/event-service.yaml и src/kubernetes/proxy-service.yaml
 
-  - Необходимо создать Deployment и Service 
+  - Необходимо создать Deployment и Service
   - Доработайте ingress.yaml, чтобы можно было с помощью тестов проверить создание событий
   - Выполните дальшейшие шаги для поднятия кластера:
 
@@ -193,8 +195,8 @@ cat .docker/config.json | base64
   ```
   Вы увидите
 
-  NAME         READY   STATUS    
-  postgres-0   1/1     Running   
+  NAME         READY   STATUS
+  postgres-0   1/1     Running
 
   4. Разверните Kafka:
   ```bash
@@ -220,7 +222,7 @@ cat .docker/config.json | base64
   kubectl apply -f src/kubernetes/proxy-service.yaml
   ```
 
-  После запуска и поднятия подов вывод команды 
+  После запуска и поднятия подов вывод команды
   ```bash
   kubectl -n cinemaabyss get pod
   ```
@@ -228,21 +230,21 @@ cat .docker/config.json | base64
   Будет наподобие такого
 
 ```bash
-  NAME                              READY   STATUS    
+  NAME                              READY   STATUS
 
-  events-service-7587c6dfd5-6whzx   1/1     Running  
+  events-service-7587c6dfd5-6whzx   1/1     Running
 
-  kafka-0                           1/1     Running   
+  kafka-0                           1/1     Running
 
-  monolith-8476598495-wmtmw         1/1     Running  
+  monolith-8476598495-wmtmw         1/1     Running
 
-  movies-service-6d5697c584-4qfqs   1/1     Running  
+  movies-service-6d5697c584-4qfqs   1/1     Running
 
-  postgres-0                        1/1     Running  
+  postgres-0                        1/1     Running
 
-  proxy-service-577d6c549b-6qfcv    1/1     Running  
+  proxy-service-577d6c549b-6qfcv    1/1     Running
 
-  zookeeper-0                       1/1     Running 
+  zookeeper-0                       1/1     Running
 ```
 
   8. Добавим ingress
@@ -277,7 +279,7 @@ cat .docker/config.json | base64
 
 
 # Задание 4
-Для простоты дальнейшего обновления и развертывания вам как архитектуру необходимо так же реализовать helm-чарты для прокси-сервиса и проверить работу 
+Для простоты дальнейшего обновления и развертывания вам как архитектуру необходимо так же реализовать helm-чарты для прокси-сервиса и проверить работу
 
 Для этого:
 1. Перейдите в директорию helm и отредактируйте файл values.yaml
@@ -330,7 +332,7 @@ template:
 kubectl delete all --all -n cinemaabyss
 kubectl delete  namespace cinemaabyss
 ```
-Запустите 
+Запустите
 ```bash
 helm install cinemaabyss .\src\kubernetes\helm --namespace cinemaabyss --create-namespace
 ```
@@ -346,7 +348,7 @@ kubectl get pods -n cinemaabyss
 minikube tunnel
 ```
 
-Потом вызовите 
+Потом вызовите
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
 
