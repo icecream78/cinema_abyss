@@ -10,7 +10,8 @@ services:
       POSTGRES_PASSWORD: postgres_password
       POSTGRES_DB: cinemaabyss
     ports:
-      - "5432:5432"
+      # TODO: вернуть 5432, чтобы было как изначально. 5432 занят в системе
+      - "54321:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./src/database/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -40,6 +41,8 @@ services:
     ports:
       - "9092:9092"
     environment:
+      # для локальной разработки этот адрес с localhost
+      # KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -114,10 +117,11 @@ services:
     environment:
       PORT: 8000
       MONOLITH_URL: http://monolith:8080
-      MOVIES_SERVICE_URL: http://movies-service:8081
-      EVENTS_SERVICE_URL: http://events-service:8082
       GRADUAL_MIGRATION: "true"
-      MOVIES_MIGRATION_PERCENT: "50"
+      PROXY_RULE_1_MAPPING: "/api/movies -> http://movies-service:8081"
+      PROXY_RULE_1_PERCENT: "50"
+      PROXY_RULE_2_MAPPING: "/api/events -> http://events-service:8082"
+      PROXY_RULE_2_PERCENT: "100"
     networks:
       - cinemaabyss-network
 
