@@ -2,12 +2,10 @@ name: Docker Build and Push
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main, cinema]
   workflow_run:
     workflows: ["API Tests"]
     types: [completed]
-    branches: [main]
+    branches: [main, cinema]
   release:
     types: [published]
 
