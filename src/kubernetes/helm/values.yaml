@@ -5,7 +5,7 @@ global:
 
 # Image pull secrets
 imagePullSecrets:
-  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6
+  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6ICJhV05sWTNKbFlXMDNPRHBuYUhCZlltWnZOSFV4VUU1WFRVb3pPRVk0VFc0d01qSmljbW8zVUdNMWQwMUNNVVpDUmxkcCIKCQl9Cgl9LAoJImNyZWRzU3RvcmUiOiAiZGVza3RvcCIsCgkiY3VycmVudENvbnRleHQiOiAiZGVza3RvcC1saW51eCIsCgkicGx1Z2lucyI6IHsKCQkiLXgtY2xpLWhpbnRzIjogewoJCQkiZW5hYmxlZCI6ICJ0cnVlIgoJCX0KCX0sCgkiZmVhdHVyZXMiOiB7CgkJImhvb2tzIjogInRydWUiCgl9Cn0=
 # Database configuration
 database:
   host: postgres
@@ -33,7 +33,7 @@ database:
 monolith:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/monolith
+    repository: ghcr.io/icecream78/cinema_abyss/monolith
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -53,7 +53,7 @@ monolith:
 proxyService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/proxy-service
+    repository: ghcr.io/icecream78/cinema_abyss/proxy-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -73,7 +73,7 @@ proxyService:
 moviesService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/movies-service
+    repository: ghcr.io/icecream78/cinema_abyss/movies-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -93,7 +93,7 @@ moviesService:
 eventsService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/events-service
+    repository: ghcr.io/icecream78/cinema_abyss/events-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -118,12 +118,12 @@ kafka:
     pullPolicy: IfNotPresent
   replicas: 1
   resources:
-    limits:
-      cpu: 1000m
-      memory: 1Gi
     requests:
-      cpu: 200m
-      memory: 512Mi
+      memory: "1Gi"
+      cpu: "1000m"
+    limits:
+      memory: "2Gi"
+      cpu: "2000m"
   persistence:
     enabled: true
     size: 5Gi
@@ -164,8 +164,12 @@ ingress:
   enabled: true
   className: nginx
   annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    # Optional but recommended annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
   hosts:
     - host: cinemaabyss.example.com
       paths:
@@ -173,13 +177,13 @@ ingress:
           pathType: Prefix
           service: proxy-service
           port: 80
-        - path: /api/events
-          pathType: Prefix
-          service: events-service
-          port: 8082
+
 
 # Application configuration
 config:
   # Strangler Fig configuration
   gradualMigration: "true"
-  moviesMigrationPercent: "100"
+  proxyRule1: "/api/movies -> http://movies-service:8081"
+  proxyRule1MigrationPercent: "100"
+  proxyRule2: "/api/events -> http://events-service:8082"
+  proxyRule2MigrationPercent: "100"

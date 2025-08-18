@@ -4,7 +4,7 @@
 -- Note: This is handled by Docker Compose and Kubernetes configs
 
 -- Connect to the database
-\c cinemaabyss;
+-- \c cinemaabyss;
 
 -- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
