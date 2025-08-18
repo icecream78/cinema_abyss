@@ -13,10 +13,17 @@ data:
   DB_NAME: {{ .Values.database.name | quote }}
   DB_USER: {{ .Values.database.user | quote }}
 
+  # TODO: нужно понять как заполнить в kafka_brokers значение с портом
+  KAFKA_BROKERS: "kafka:9092"
+
   # Service URLs
   MONOLITH_URL: "http://monolith:{{ .Values.monolith.service.port }}"
   MOVIES_SERVICE_URL: "http://movies:{{ .Values.moviesService.service.port }}"
-  
+
   # Strangler Fig configuration
   GRADUAL_MIGRATION: {{ .Values.config.gradualMigration | quote }}
-  MOVIES_MIGRATION_PERCENT: {{ .Values.config.moviesMigrationPercent | quote }}
+  # TODO: почитать какая есть автоматизация для этой штуки? это же гошные шаблоны, по идее, а значит весь функционал доступен
+  PROXY_RULE_1_MAPPING: "/api/movies -> http://movies-service:8081"
+  PROXY_RULE_1_PERCENT: {{ .Values.config.proxyRule1MigrationPercent | quote }}
+  PROXY_RULE_2_MAPPING: "/api/events -> http://events-service:8082"
+  PROXY_RULE_2_PERCENT: {{ .Values.config.proxyRule2MigrationPercent | quote }}
